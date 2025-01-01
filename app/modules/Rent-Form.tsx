@@ -4,8 +4,21 @@ export default function RentForm() {
   const [tenants, setTenants] = useState([{ salary: 1000 }, { salary: 500 }]);
   const [calculatedRent, setCalculatedRent] = useState<string[]>([]);
     return (
-        <div>
-            <h1>Rent Form</h1>
-        </div>
-    )
+  const TenantInputs = () => {
+    return tenants.map((tenant, index) => (
+      <Form.Item key={index} label={`Tenant ${index + 1} Salary`}>
+        <InputNumber
+          size="large"
+          prefix="€"
+          value={tenant.salary}
+          onChange={(value) => {
+            const newTenants = [...tenants];
+            newTenants[index] = { salary: value ?? 0 };
+            setTenants(newTenants);
+          }}
+          style={{ width: "100%" }}
+        />
+      </Form.Item>
+    ));
+  };
 }
