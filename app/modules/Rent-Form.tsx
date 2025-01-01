@@ -21,4 +21,38 @@ export default function RentForm() {
       </Form.Item>
     ));
   };
+  return (
+    <div className="flex items-center gap-4">
+      <div>
+        <h1>Rent Form</h1>
+
+        <Form layout="vertical">
+          <Form.Item label="Monthly Rent">
+            <InputNumber
+              size="large"
+              prefix="€"
+              value={rent}
+              onChange={(e) => setRent(e.target.value)}
+              style={{ width: "100%" }}
+            />
+          </Form.Item>
+
+          <TenantInputs />
+
+}
+          <Button
+            size="large"
+            type="primary"
+            onClick={calculate}
+            style={{ width: "100%" }}
+          >
+            Calculate
+          </Button>
+        </Form>
+      </div>
+      <div className="justify-self-end">
+        <RentSplit items={calculatedRent} />
+      </div>
+    </div>
+  );
 }
