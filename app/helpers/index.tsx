@@ -12,6 +12,11 @@ export const calculateRent = (
   return output;
 };
 
+export const metadata = {
+  title: "Rent Calculator",
+  description: "Calculate the rent split over different incomes",
+};
+
 export const RentSplit: React.FC<{ items: string[] }> = ({ items }) => {
   const itemsValid = items.length > 0;
   return (
