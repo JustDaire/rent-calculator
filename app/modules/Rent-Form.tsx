@@ -40,7 +40,7 @@ export default function RentForm() {
           icon={<PlusOutlined />}
           size="large"
         >
-          Add field
+          Add tenant
         </Button>
       </Form.Item>
     );
