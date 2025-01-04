@@ -6,9 +6,11 @@ import { useState } from "react";
 import { calculateRent, RentSplit } from "../helpers";
 import { Tenant } from "../Types";
 
+const defaultTenants: Tenant[] = [{ salary: 1000 }, { salary: 500 }];
+
 export default function RentForm() {
   const [rent, setRent] = useState(1200);
-  const [tenants, setTenants] = useState([{ salary: 1000 }, { salary: 500 }]);
+  const [tenants, setTenants] = useState<Tenant[]>(defaultTenants);
   const [calculatedRent, setCalculatedRent] = useState<string[]>([]);
 
   const calculate = () => {
