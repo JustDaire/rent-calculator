@@ -16,7 +16,7 @@ export const RentSplit: React.FC<{ items: string[] }> = ({ items }) => {
   const itemsValid = items.length > 0;
   return (
     itemsValid && (
-      <div className="p-4 border border-gray-200 rounded-md">
+      <div className="self-center min-h-full w-full m-8 p-4 border border-gray-200 rounded-md">
         {items.map((line, index) => (
           <p key={index}>{line}</p>
         ))}

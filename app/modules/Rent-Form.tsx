@@ -65,10 +65,8 @@ export default function RentForm() {
   };
 
   return (
-    <div className="flex items-center gap-4">
-      <div>
-        <h1>Rent Form</h1>
-
+    <div className="grid grid-cols-1 sm:grid-cols-2 items-center gap-4 content-stretch place-content-stretch">
+      <div className="col">
         <Form layout="vertical">
           <Form.Item label="Monthly Rent">
             <InputNumber
@@ -94,7 +92,7 @@ export default function RentForm() {
           </Button>
         </Form>
       </div>
-      <div className="justify-self-end">
+      <div className="col flex items-stretch min-h-full self-center border border-gray-200 rounded-md">
         <RentSplit items={calculatedRent} />
       </div>
     </div>
