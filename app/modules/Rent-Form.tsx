@@ -4,6 +4,7 @@ import { MinusCircleOutlined, PlusOutlined } from "@ant-design/icons";
 import { Button, Form, InputNumber } from "antd";
 import { useState } from "react";
 import { calculateRent, RentSplit } from "../helpers";
+import { Tenant } from "../Types";
 
 export default function RentForm() {
   const [rent, setRent] = useState(1200);
