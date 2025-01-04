@@ -1,6 +1,6 @@
 "use client";
 
-import { PlusOutlined } from "@ant-design/icons";
+import { MinusCircleOutlined, PlusOutlined } from "@ant-design/icons";
 import { Button, Form, InputNumber } from "antd";
 import { useState } from "react";
 import { calculateRent, RentSplit } from "../helpers";
