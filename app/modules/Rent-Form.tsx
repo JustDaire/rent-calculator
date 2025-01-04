@@ -75,7 +75,7 @@ export default function RentForm() {
               size="large"
               prefix="€"
               value={rent}
-              onChange={(e) => setRent(e.target.value)}
+              onChange={(value) => setRent(value ?? 0)}
               style={{ width: "100%" }}
             />
           </Form.Item>
