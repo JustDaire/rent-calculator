@@ -47,8 +47,32 @@ export default function RentForm() {
   };
 
   const TenantInputs = () => {
+    function remove(index: number): void {
+      const newTenants = [...tenants];
+      newTenants.splice(index, 1);
+      setTenants(newTenants);
+    }
+
+    const formLabel = (idx: number) => {
+      return (
+        <div className="flex justify-between w-full test2">
+          <span>Tenant {idx + 1} Salary</span>
+          {RemoveTenant(idx)}
+        </div>
+      );
+    };
+
+    const RemoveTenant = (index: number) => {
+      return tenants.length > 1 ? (
+        <MinusCircleOutlined
+          className="dynamic-delete-button"
+          onClick={() => remove(index)}
+        />
+      ) : null;
+    };
+
     return tenants.map((tenant, index) => (
-      <Form.Item key={index} label={`Tenant ${index + 1} Salary`}>
+      <Form.Item key={index} label={formLabel(index)} className="w-full test">
         <InputNumber
           size="large"
           prefix="€"

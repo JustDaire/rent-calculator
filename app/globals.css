@@ -25,3 +25,7 @@ body {
     text-wrap: balance;
   }
 }
+
+.ant-form-item-label label {
+  width: 100%;
+}
