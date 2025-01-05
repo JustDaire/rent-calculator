@@ -1,3 +1,3 @@
 export type Tenant = {
-  salary: number;
+  salary: number | null;
 };
